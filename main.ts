@@ -106,7 +106,7 @@ setupIfcLoader();
 
 BUI.Manager.init();
 
-// UI-Panel mit beiden Buttons
+// UI-Panel 
 const panel = BUI.Component.create<BUI.PanelSection>(() => {
   return BUI.html`
     <bim-panel class="options-menu">
