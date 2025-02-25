@@ -20,7 +20,7 @@ Open a terminal window in Visual Studio Code and install:<br>
 
 ## First Run
 
-Create a folder called "GetVolume" and place the downloaded files inside. Open that folder in in vscode. Open a terminal window in vscode and type: 
+Create a folder called "BoundingBoxer" and place the downloaded files inside. Open that folder in in vscode. Open a terminal window in vscode and type: 
 > npm run dev
 >
 A browser showing GetVolume should open. the is based on this tutorial [thatopen](https://docs.thatopen.com/Tutorials/Components/Core/BoundingBoxer)
