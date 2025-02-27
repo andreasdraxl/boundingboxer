@@ -104,6 +104,21 @@ fileInput.addEventListener("change", async (event) => {
 // IFC-Loader Setup aufrufen
 setupIfcLoader();
 
+// ifc load
+const load_ifc = () => {
+  fileInput.click() 
+};
+// fit to model
+
+
+const fit_BIM_Model = () => {
+  if (bbox) {
+    world.camera.controls.fitToSphere(bbox, true);
+  } else {
+    console.warn("Kein Modell geladen, Fit nicht möglich.");
+  }
+};
+
 BUI.Manager.init();
 
 // UI-Panel 
@@ -114,20 +129,13 @@ const panel = BUI.Component.create<BUI.PanelSection>(() => {
          
         <bim-button 
           label="Lade IFC-Datei" 
-          @click="${() => fileInput.click()}">  
+          @click="${load_ifc}">  
         </bim-button>
         
-        <bim-button 
+         <bim-button 
           label="Fit BIM model" 
-          @click="${() => {
-            if (bbox) {
-              world.camera.controls.fitToSphere(bbox, true);
-            } else {
-              console.warn("Kein Modell geladen, Fit nicht möglich.");
-            }
-          }}">  
-        </bim-button>  
-
+          @click="${fit_BIM_Model}">  
+        </bim-button>
       
     </bim-panel>
     `;
